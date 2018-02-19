@@ -22,8 +22,8 @@ public class TestBCRActivity extends Activity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);//TBD
-        lbm.registerReceiver(new TestReceiver(), new IntentFilter("com.cloudjibe.intents.testbc"));//TBD
+        //LocalBroadcastManager lbm = LocalBroadcastManager.getInstance(this);//TBD
+        //lbm.registerReceiver(new TestReceiver(), new IntentFilter("com.cloudjibe.intents.testbc"));//TBD
 
         setContentView(R.layout.main);
     }
@@ -67,11 +67,11 @@ public class TestBCRActivity extends Activity
         //Toast.makeText(this, "Broadcast"     , Toast.LENGTH_LONG).show();
     	//Create an intent with an action
     	Intent broadcastIntent = new Intent("com.cloudjibe.intents.testbc");
-        //broadcastIntent.setClass(this, TestReceiver.class);//if you dont want to use LocalBroadcastManager
+        broadcastIntent.setClass(this, TestReceiver.class);//if you dont want to use LocalBroadcastManager
 
     	broadcastIntent.putExtra("message", "Hello world");
-    	//sendBroadcast(broadcastIntent); //if you dont want to use LocalBroadcastManager
-        LocalBroadcastManager.getInstance(this).sendBroadcast(broadcastIntent); //TBD
+    	sendBroadcast(broadcastIntent); //if you dont want to use LocalBroadcastManager
+        //LocalBroadcastManager.getInstance(this).sendBroadcast(broadcastIntent); //TBD 
 
     	Log.d(tag,"*****........ Manoj send broadcast from main menu........*****");
     }

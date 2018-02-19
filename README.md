@@ -73,6 +73,5 @@ public static final String tag="TestBroadcast >";
 - [*Pro Android 5*](https://github.com/Apress/pro-android-5) by Dave MacLean, Satya Komatineni, and Grant Allen (Apress, 2015)
 
 ## Thank You
-# [*Manoj Kumar*](https://www.linkedin.com/in/manojkumar19/)
-
-# Solutions Architect
+#### [*Manoj Kumar*](https://www.linkedin.com/in/manojkumar19/)
+#### Solutions Architect
